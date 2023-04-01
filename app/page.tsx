@@ -13,7 +13,7 @@ export default function Home() {
     <div className="h-screen">
       <div className="grid grid-cols-2 gap-10 h-full items-center">
         <div className="col-span-2 md:col-span-1 lg:pl-32 p-10 h-1/2">
-          <p className="text-lg">Hey! I&apos;m Mustafa</p>
+          <p className="text-lg">Hey! I&apos;m Mustafa,</p>
           <h1 className="text-6xl font-bold">Software Engineer</h1>
           <p className="pt-10">Contact Me:</p>
           <ul className="list-disc pl-5">
