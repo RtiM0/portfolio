@@ -3,7 +3,7 @@ import Poem from "@/components/poem";
 const contact = {
   Mail: 'mailto:hello@shakirmustafa.com',
   Linkedin: 'https://www.linkedin.com/in/otatopotato',
-  Telegram: 'https://otatopotato.telegram.me',
+  Telegram: 'https://otatopotato.t.me',
   Github: 'https://github.com/RtiM0',
   Twitter: 'https://twitter.com/RtiM0',
 }
