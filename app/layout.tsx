@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${mono.variable}`}>
+    <html lang="en" className={`${inter.variable} ${mono.variable} dark:bg-zinc-900 dark:text-gray-50`}>
       <body className='font-inter'>{children}</body>
     </html>
   )
