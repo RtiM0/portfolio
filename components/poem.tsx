@@ -20,5 +20,5 @@ As the one who built the site so fine,
 But until then, let's just pretend it's still in its prime.`
 
 export default function Poem() {
-    return <p className="whitespace-pre-wrap font-mono font-semibold text-lg">{poem}</p>
+    return <p className="whitespace-pre-wrap font-mono text-lg">{poem}</p>
 }
