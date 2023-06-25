@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="fixed inset-0 flex justify-center sm:px-8">
       <div className="flex w-full max-w-7xl lg:px-8">
-        <div className="grid grid-cols-2 gap-10 items-center bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20">
+        <div className="grid grid-cols-2 gap-10 items-center bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20 overflow-auto">
           <div className="col-span-2 md:col-span-1 lg:pl-32 p-10 h-1/2 tracking-tight text-zinc-800 dark:text-zinc-100">
             <p className="text-lg">Hey! I&apos;m Mustafa,</p>
             <h1 className="text-6xl font-bold">Software Engineer</h1>
