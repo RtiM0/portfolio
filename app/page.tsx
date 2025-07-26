@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, ExternalLink, Github, Linkedin, Mail, MapPin } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -16,30 +17,40 @@ export default function Home() {
               <h1 className="text-6xl md:text-8xl font-bold tracking-tight font-serif -mt-4 max-sm:text-6xl max-sm:mt-0">SHAKIR</h1>
               <p className="text-2xl md:text-3xl font-light mt-4 tracking-wide max-sm:text-lg max-sm:mt-2">SOFTWARE ENGINEER</p>
             </div>
-            <div className="flex gap-4 mt-6 md:mt-0 max-sm:justify-center">
+            <div className="grid grid-cols-4 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-6 md:mt-0 max-sm:justify-center">
+              <ThemeToggle/>
               <Button
                 variant="outline"
                 size="lg"
                 className="border-2 border-black dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black bg-transparent max-sm:px-3"
+                asChild
               >
-                <Github className="w-5 h-5 max-sm:mr-0 mr-2" />
-                <span className="max-sm:hidden">GitHub</span>
+                <Link href="#" target="_blank">
+                  <Github className="w-5 h-5 lg:mr-2" />
+                  <span className="hidden sm:block md:hidden lg:block">GitHub</span>
+                </Link>
               </Button>
               <Button
                 variant="outline"
                 size="lg"
                 className="border-2 border-black dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black bg-transparent max-sm:px-3"
+                asChild
               >
-                <Linkedin className="w-5 h-5 max-sm:mr-0 mr-2" />
-                <span className="max-sm:hidden">LinkedIn</span>
+                <Link href="https://linkedin.com/in/otatopotato" target="_blank">
+                  <Linkedin className="w-5 h-5 lg:mr-2" />
+                  <span className="hidden sm:block md:hidden lg:block">LinkedIn</span>
+                </Link>
               </Button>
               <Button
                 variant="outline"
                 size="lg"
                 className="border-2 border-black dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black bg-transparent max-sm:px-3"
+                asChild
               >
-                <Mail className="w-5 h-5 max-sm:mr-0 mr-2" />
-                <span className="max-sm:hidden">Contact</span>
+                <Link href="mailto:hello@shakirmustafa.com">
+                  <Mail className="w-5 h-5 lg:mr-2" />
+                  <span className="hidden sm:block md:hidden lg:block">Contact</span>
+                </Link>
               </Button>
             </div>
           </div>
@@ -51,7 +62,7 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl md:text-6xl font-bold font-serif leading-tight mb-8">
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-serif leading-tight mb-8">
                 CRAFTING DIGITAL
                 <br />
                 EXPERIENCES WITH
@@ -59,8 +70,7 @@ export default function Home() {
                 <span className="bg-black dark:bg-white text-white dark:text-black px-4 py-2">CODE</span>
               </h2>
               <p className="text-xl md:text-2xl leading-relaxed font-light">
-                Full-stack developer with 5+ years of experience building scalable web applications. Passionate about
-                clean code, user experience, and solving complex problems with elegant solutions.
+                Backend-focused Software Engineer with experience in building scalable and performant applications. Passionate about solving complex problems with elegant solutions.
               </p>
             </div>
             <div className="bg-black dark:bg-white text-white dark:text-black p-8">
@@ -68,7 +78,7 @@ export default function Home() {
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <MapPin className="w-6 h-6" />
-                  <span className="text-xl">San Francisco, CA</span>
+                  <span className="text-xl">Bengaluru, Karnataka</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Calendar className="w-6 h-6" />
@@ -87,25 +97,21 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="md:col-span-2">
               <p className="text-xl md:text-2xl leading-relaxed mb-6 font-light">
-                I'm a software engineer who believes that great code is like great journalism – it tells a clear story,
-                gets to the point quickly, and serves its audience well. With a background in both frontend and backend
-                development, I specialize in creating robust, scalable applications that users actually want to use.
+                I'm a software engineer with a strong background in backend development, skilled in creating robust and scalable systems. My experience spans across various domains including e-commerce, fintech, and social media platforms.
               </p>
               <p className="text-xl md:text-2xl leading-relaxed font-light">
-                When I'm not coding, you'll find me reading about emerging technologies, contributing to open-source
-                projects, or exploring the latest coffee shops in the city. I believe the best solutions come from
-                understanding both the technical requirements and the human needs behind every project.
+                I enjoy tackling complex challenges, from optimizing system performance to designing and implementing new product features from the ground up. I'm always eager to learn and apply new technologies to build efficient and impactful solutions.
               </p>
             </div>
             <div className="bg-gray-100 dark:bg-gray-900 p-6">
               <h3 className="text-2xl font-bold font-serif mb-4">EXPERTISE</h3>
               <ul className="space-y-2 text-lg">
+                <li>• Backend Development</li>
+                <li>• System Design & Architecture</li>
                 <li>• Full-Stack Development</li>
-                <li>• React & Next.js</li>
-                <li>• Node.js & Python</li>
-                <li>• Database Design</li>
-                <li>• API Architecture</li>
-                <li>• Cloud Deployment</li>
+                <li>• Cloud & DevOps</li>
+                <li>• Database Management</li>
+                <li>• API Design</li>
                 <li>• Performance Optimization</li>
               </ul>
             </div>
@@ -120,23 +126,23 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <h3 className="text-2xl font-bold font-serif mb-6 border-b-2 border-black dark:border-white pb-2">
-                FRONTEND
+                LANGUAGES
               </h3>
               <div className="flex flex-wrap gap-2">
                 <Badge variant="outline" className="text-lg py-2 px-4 border-2 border-black dark:border-white">
-                  React
+                  Java
                 </Badge>
                 <Badge variant="outline" className="text-lg py-2 px-4 border-2 border-black dark:border-white">
-                  Next.js
+                  Python
                 </Badge>
                 <Badge variant="outline" className="text-lg py-2 px-4 border-2 border-black dark:border-white">
-                  TypeScript
+                  JavaScript
                 </Badge>
                 <Badge variant="outline" className="text-lg py-2 px-4 border-2 border-black dark:border-white">
-                  Tailwind CSS
+                  Kotlin
                 </Badge>
                 <Badge variant="outline" className="text-lg py-2 px-4 border-2 border-black dark:border-white">
-                  Vue.js
+                  Golang
                 </Badge>
               </div>
             </div>
@@ -146,25 +152,47 @@ export default function Home() {
               </h3>
               <div className="flex flex-wrap gap-2">
                 <Badge variant="outline" className="text-lg py-2 px-4 border-2 border-black dark:border-white">
-                  Node.js
+                  Spring Boot
                 </Badge>
                 <Badge variant="outline" className="text-lg py-2 px-4 border-2 border-black dark:border-white">
-                  Python
+                  NestJS
                 </Badge>
                 <Badge variant="outline" className="text-lg py-2 px-4 border-2 border-black dark:border-white">
-                  Express
+                  Django
                 </Badge>
                 <Badge variant="outline" className="text-lg py-2 px-4 border-2 border-black dark:border-white">
-                  FastAPI
+                  Kafka
                 </Badge>
                 <Badge variant="outline" className="text-lg py-2 px-4 border-2 border-black dark:border-white">
-                  GraphQL
+                  Celery
                 </Badge>
               </div>
             </div>
             <div>
               <h3 className="text-2xl font-bold font-serif mb-6 border-b-2 border-black dark:border-white pb-2">
-                DATABASE
+                FRONTEND
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                <Badge variant="outline" className="text-lg py-2 px-4 border-2 border-black dark:border-white">
+                  ReactJS
+                </Badge>
+                <Badge variant="outline" className="text-lg py-2 px-4 border-2 border-black dark:border-white">
+                  Next.js
+                </Badge>
+                <Badge variant="outline" className="text-lg py-2 px-4 border-2 border-black dark:border-white">
+                  Tailwind CSS
+                </Badge>
+                <Badge variant="outline" className="text-lg py-2 px-4 border-2 border-black dark:border-white">
+                  Android
+                </Badge>
+                <Badge variant="outline" className="text-lg py-2 px-4 border-2 border-black dark:border-white">
+                  Flutter
+                </Badge>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold font-serif mb-6 border-b-2 border-black dark:border-white pb-2">
+                DATABASE & TOOLS
               </h3>
               <div className="flex flex-wrap gap-2">
                 <Badge variant="outline" className="text-lg py-2 px-4 border-2 border-black dark:border-white">
@@ -174,18 +202,8 @@ export default function Home() {
                   MongoDB
                 </Badge>
                 <Badge variant="outline" className="text-lg py-2 px-4 border-2 border-black dark:border-white">
-                  Redis
+                  Elasticsearch
                 </Badge>
-                <Badge variant="outline" className="text-lg py-2 px-4 border-2 border-black dark:border-white">
-                  Supabase
-                </Badge>
-              </div>
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold font-serif mb-6 border-b-2 border-black dark:border-white pb-2">
-                TOOLS
-              </h3>
-              <div className="flex flex-wrap gap-2">
                 <Badge variant="outline" className="text-lg py-2 px-4 border-2 border-black dark:border-white">
                   Docker
                 </Badge>
@@ -193,10 +211,7 @@ export default function Home() {
                   AWS
                 </Badge>
                 <Badge variant="outline" className="text-lg py-2 px-4 border-2 border-black dark:border-white">
-                  Vercel
-                </Badge>
-                <Badge variant="outline" className="text-lg py-2 px-4 border-2 border-black dark:border-white">
-                  Git
+                  Terraform
                 </Badge>
               </div>
             </div>
@@ -335,60 +350,57 @@ export default function Home() {
           <div className="space-y-12">
             <div className="grid md:grid-cols-4 gap-8 border-b border-gray-300 dark:border-gray-700 pb-8">
               <div>
-                <h3 className="text-2xl font-bold font-serif">SENIOR SOFTWARE ENGINEER</h3>
-                <p className="text-xl font-light">TechCorp Inc.</p>
-                <p className="text-lg text-gray-600 dark:text-gray-400">2022 - Present</p>
+                <h3 className="text-2xl font-bold font-serif">SDE 2 - BACKEND</h3>
+                <p className="text-xl font-light">Jar</p>
+                <p className="text-lg text-gray-600 dark:text-gray-400">07/2023 - Present</p>
               </div>
               <div className="md:col-span-3">
                 <p className="text-lg mb-4 font-light">
-                  Lead development of microservices architecture serving 1M+ users. Mentored junior developers and
-                  established coding standards that improved team productivity by 40%.
+                  Leading full-stack development of an e-commerce channel, and improving web performance and infrastructure.
                 </p>
                 <ul className="text-lg space-y-2 font-light">
-                  <li>• Architected and implemented scalable backend services using Node.js and PostgreSQL</li>
-                  <li>• Reduced application load time by 60% through performance optimization</li>
-                  <li>• Led migration from monolithic to microservices architecture</li>
-                  <li>• Implemented CI/CD pipelines reducing deployment time from hours to minutes</li>
+                  <li>• Led development of an e-commerce platform, scaling to handle thousands of daily orders.</li>
+                  <li>• Migrated SMS processing to ScyllaDB, reducing infrastructure costs by 60%.</li>
+                  <li>• Developed a health insurance vertical with A/B testing capabilities for a 20 million user base.</li>
+                  <li>• Built a P2P investment product with robust KYC and queueing systems.</li>
                 </ul>
               </div>
             </div>
 
             <div className="grid md:grid-cols-4 gap-8 border-b border-gray-300 dark:border-gray-700 pb-8">
               <div>
-                <h3 className="text-2xl font-bold font-serif">FULL STACK DEVELOPER</h3>
-                <p className="text-xl font-light">StartupXYZ</p>
-                <p className="text-lg text-gray-600 dark:text-gray-400">2020 - 2022</p>
+                <h3 className="text-2xl font-bold font-serif">CO-FOUNDER, SOFTWARE ENGINEER</h3>
+                <p className="text-xl font-light">prettyRECON</p>
+                <p className="text-lg text-gray-600 dark:text-gray-400">11/2020 - Present</p>
               </div>
               <div className="md:col-span-3">
                 <p className="text-lg mb-4 font-light">
-                  Built the entire frontend and backend infrastructure for a B2B SaaS platform from scratch. Worked
-                  directly with founders to translate business requirements into technical solutions.
+                  Co-founded and built an online reconnaissance tool for pen-testers and bug bounty hunters, achieving profitability with over 100 recurring subscribers.
                 </p>
                 <ul className="text-lg space-y-2 font-light">
-                  <li>• Developed responsive web application using React and Next.js</li>
-                  <li>• Built RESTful APIs and GraphQL endpoints for mobile and web clients</li>
-                  <li>• Implemented real-time features using WebSocket connections</li>
-                  <li>• Designed and optimized database schemas for high-performance queries</li>
+                  <li>• Built the entire backend from scratch, creating a profitable product.</li>
+                  <li>• Designed a system to schedule and process resource-intensive tasks for hundreds of active users.</li>
+                  <li>• Managed data storage and indexing using Postgres and Elasticsearch.</li>
+                  <li>• Implemented verification systems and managed stack deployment.</li>
                 </ul>
               </div>
             </div>
 
             <div className="grid md:grid-cols-4 gap-8">
               <div>
-                <h3 className="text-2xl font-bold font-serif">SOFTWARE DEVELOPER</h3>
-                <p className="text-xl font-light">Digital Agency Co.</p>
-                <p className="text-lg text-gray-600 dark:text-gray-400">2019 - 2020</p>
+                <h3 className="text-2xl font-bold font-serif">SOFTWARE ENGINEER</h3>
+                <p className="text-xl font-light">Quriverse</p>
+                <p className="text-lg text-gray-600 dark:text-gray-400">09/2022 - 06/2023</p>
               </div>
               <div className="md:col-span-3">
                 <p className="text-lg mb-4 font-light">
-                  Developed custom web applications for clients across various industries. Collaborated with designers
-                  and project managers to deliver pixel-perfect implementations.
+                  Developed core features for a social media platform, including a content ranking system and real-time event delivery.
                 </p>
                 <ul className="text-lg space-y-2 font-light">
-                  <li>• Created responsive websites and web applications for 20+ clients</li>
-                  <li>• Integrated third-party APIs and payment processing systems</li>
-                  <li>• Optimized websites for SEO and performance achieving 95+ Lighthouse scores</li>
-                  <li>• Maintained and updated legacy codebases while implementing new features</li>
+                  <li>• Developed a 3-component scoring system to rank user posts.</li>
+                  <li>• Built a real-time system with Redis Pub/Sub for event delivery to thousands of clients.</li>
+                  <li>• Created a scalable serverless solution for media processing and delivery.</li>
+                  <li>• Wrote Infrastructure as Code (IaaC) for CI/CD using Terraform and CloudFormation.</li>
                 </ul>
               </div>
             </div>
@@ -409,11 +421,11 @@ export default function Home() {
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <Mail className="w-8 h-8" />
-                  <span className="text-2xl">mustafa.shakir@email.com</span>
+                  <span className="text-2xl">contact@shakirmustafa.com</span>
                 </div>
                 <div className="flex items-center gap-4">
                   <MapPin className="w-8 h-8" />
-                  <span className="text-2xl">San Francisco, CA</span>
+                  <span className="text-2xl">Bengaluru, Karnataka</span>
                 </div>
               </div>
             </div>
@@ -428,25 +440,34 @@ export default function Home() {
                   size="lg"
                   variant="outline"
                   className="border-2 border-white dark:border-black text-white dark:text-black hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white bg-transparent"
+                  asChild
                 >
-                  <Mail className="w-5 h-5 mr-2" />
-                  Send Email
+                  <Link href="mailto:hello@shakirmustafa.com">
+                    <Mail className="w-5 h-5 mr-2" />
+                    Send Email
+                  </Link>
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
                   className="border-2 border-white dark:border-black text-white dark:text-black hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white bg-transparent"
+                  asChild
                 >
-                  <Linkedin className="w-5 h-5 mr-2" />
-                  Connect on LinkedIn
+                  <Link href="https://linkedin.com/in/otatopotato" target="_blank">
+                    <Linkedin className="w-5 h-5 mr-2" />
+                    Connect on LinkedIn
+                  </Link>
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
                   className="border-2 border-white dark:border-black text-white dark:text-black hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white bg-transparent"
+                  asChild
                 >
-                  <Github className="w-5 h-5 mr-2" />
-                  View GitHub Profile
+                  <Link href="https://github.com/RtiM0" target="_blank">
+                    <Github className="w-5 h-5 mr-2" />
+                    View GitHub Profile
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -460,7 +481,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between">
             <div>
               <p className="text-2xl font-bold font-serif">MUSTAFA SHAKIR</p>
-              <p className="text-lg font-light">Software Engineer • San Francisco, CA</p>
+              <p className="text-lg font-light">Software Engineer • Bengaluru, Karnataka</p>
             </div>
             <div className="mt-4 md:mt-0">
               <p className="text-lg font-light">© {new Date().getFullYear()} All rights reserved.</p>

@@ -1,7 +1,7 @@
-import { ThemeProvider } from '@/components/theme-provider'
 import './globals.css'
 import { Inter, Playfair_Display } from "next/font/google"
 import { TailwindIndicator } from '@/components/tailwind-indicator'
+import { ThemeProvider } from 'next-themes'
 
 const inter = Inter({
   subsets: ["latin"],
@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`} suppressHydrationWarning>
       <body>
-        <ThemeProvider defaultTheme="system">
+        <ThemeProvider defaultTheme="system" attribute={"class"}>
           {children}
           <TailwindIndicator/>
         </ThemeProvider>
