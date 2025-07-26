@@ -8,39 +8,38 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white transition-colors">
       {/* Header */}
-      <header className="border-b-4 border-black dark:border-white py-8">
+      <header className="border-b-4 border-black dark:border-white py-8 max-sm:h-[55vh] max-sm:flex max-sm:items-center">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-            <div>
-              <h1 className="text-6xl md:text-8xl font-bold tracking-tight font-serif">MUSTAFA</h1>
-              <h1 className="text-6xl md:text-8xl font-bold tracking-tight font-serif -mt-4">SHAKIR</h1>
-              <p className="text-2xl md:text-3xl font-light mt-4 tracking-wide">SOFTWARE ENGINEER</p>
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between max-sm:h-full max-sm:justify-center">
+            <div className="max-sm:text-center max-sm:mb-8">
+              <h1 className="text-6xl md:text-8xl font-bold tracking-tight font-serif max-sm:text-6xl max-sm:leading-tight">MUSTAFA</h1>
+              <h1 className="text-6xl md:text-8xl font-bold tracking-tight font-serif -mt-4 max-sm:text-6xl max-sm:mt-0">SHAKIR</h1>
+              <p className="text-2xl md:text-3xl font-light mt-4 tracking-wide max-sm:text-lg max-sm:mt-2">SOFTWARE ENGINEER</p>
             </div>
-            <div className="flex gap-4 mt-6 md:mt-0">
-              <ThemeToggle />
+            <div className="flex gap-4 mt-6 md:mt-0 max-sm:justify-center">
               <Button
                 variant="outline"
                 size="lg"
-                className="border-2 border-black dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black bg-transparent"
+                className="border-2 border-black dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black bg-transparent max-sm:px-3"
               >
-                <Github className="w-5 h-5 mr-2" />
-                GitHub
+                <Github className="w-5 h-5 max-sm:mr-0 mr-2" />
+                <span className="max-sm:hidden">GitHub</span>
               </Button>
               <Button
                 variant="outline"
                 size="lg"
-                className="border-2 border-black dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black bg-transparent"
+                className="border-2 border-black dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black bg-transparent max-sm:px-3"
               >
-                <Linkedin className="w-5 h-5 mr-2" />
-                LinkedIn
+                <Linkedin className="w-5 h-5 max-sm:mr-0 mr-2" />
+                <span className="max-sm:hidden">LinkedIn</span>
               </Button>
               <Button
                 variant="outline"
                 size="lg"
-                className="border-2 border-black dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black bg-transparent"
+                className="border-2 border-black dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black bg-transparent max-sm:px-3"
               >
-                <Mail className="w-5 h-5 mr-2" />
-                Contact
+                <Mail className="w-5 h-5 max-sm:mr-0 mr-2" />
+                <span className="max-sm:hidden">Contact</span>
               </Button>
             </div>
           </div>
