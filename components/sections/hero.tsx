@@ -12,7 +12,7 @@ export function Hero() {
               <br />
               EXPERIENCES WITH
               <br />
-              <span className="bg-black dark:bg-white text-white dark:text-black px-4 py-2">CODE</span>
+              <span className="bg-black dark:bg-white text-white dark:text-black px-4 py-2 transition-colors duration-300">CODE</span>
             </h2>
             <p className="text-xl md:text-2xl leading-relaxed font-light">
               {personalInfo.description}

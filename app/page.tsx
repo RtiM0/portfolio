@@ -14,7 +14,7 @@ export default function Home() {
       <Hero />
       <About />
       <Skills />
-      <FeaturedWork />
+      {/* <FeaturedWork /> */}
       <Experience />
       <Contact />
       <Footer />
