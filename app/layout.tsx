@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`} suppressHydrationWarning>
       <body>
-        <ThemeProvider defaultTheme="system" attribute={"class"}>
+        <ThemeProvider enableSystem={false} attribute={"class"}>
           {children}
           <TailwindIndicator/>
         </ThemeProvider>
