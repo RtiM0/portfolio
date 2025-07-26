@@ -11,7 +11,7 @@ export function Header() {
     <header className="border-b-4 border-black dark:border-white py-8 max-sm:h-[55vh] max-sm:flex max-sm:items-center">
       <button 
         onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-        className="w-full bg-transparent border-none cursor-pointer p-0 m-0 text-left"
+        className="w-full bg-transparent border-none cursor-pointer p-0 m-0 text-left transition-all duration-75 active:scale-[0.98] active:brightness-75"
       >
         <div className="container mx-auto px-6 relative">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between max-sm:h-full max-sm:justify-center">
@@ -32,17 +32,20 @@ export function Header() {
               icon={Github} 
               label="GitHub" 
               external 
+              onClick={(e) => e.stopPropagation()}
             />
             <SocialButton 
               href={contactInfo.linkedin} 
               icon={Linkedin} 
               label="LinkedIn" 
               external 
+              onClick={(e) => e.stopPropagation()}
             />
             <SocialButton 
               href={`mailto:${contactInfo.email}`} 
               icon={Mail} 
               label="Contact" 
+              onClick={(e) => e.stopPropagation()}
             />
           </div>
           <div className="absolute top-4 right-4">

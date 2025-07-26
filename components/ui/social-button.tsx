@@ -8,6 +8,7 @@ interface SocialButtonProps {
   label: string;
   variant?: "light" | "dark";
   external?: boolean;
+  onClick?: (e: React.MouseEvent) => void;
 }
 
 export function SocialButton({ 
@@ -15,7 +16,8 @@ export function SocialButton({
   icon: Icon, 
   label, 
   variant = "light",
-  external = false 
+  external = false,
+  onClick 
 }: SocialButtonProps) {
   const baseClasses = "border-2 bg-transparent max-sm:px-3";
   const variantClasses = variant === "light" 
@@ -29,7 +31,15 @@ export function SocialButton({
       className={`${baseClasses} ${variantClasses}`}
       asChild
     >
-      <Link href={href} target={external ? "_blank" : undefined}>
+      <Link 
+        href={href} 
+        target={external ? "_blank" : undefined}
+        onClick={(e) => {
+          if (onClick) {
+            onClick(e);
+          }
+        }}
+      >
         <Icon className="w-5 h-5 lg:mr-2" />
         <span className="hidden sm:block md:hidden lg:block">{label}</span>
       </Link>

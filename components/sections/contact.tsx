@@ -1,3 +1,4 @@
+'use client';
 import { SocialButton } from "@/components/ui/social-button";
 import { Github, Linkedin, Mail, MapPin } from "lucide-react";
 import { contactInfo } from "@/constants/portfolio-data";
